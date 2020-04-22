@@ -32,7 +32,8 @@
         </rollingPolicy>
         <!-- 日志输出格式： -->
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>[TRACEID:%X{traceId}] %d{HH:mm:ss.SSS} %-5level %class{-1}/%L - %msg%xEx%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [ %thread ] - [ %-5level ] [ %logger{50} : %line ] - %msg%n</pattern>
+            <!--<pattern>[TRACEID:%X{traceId}] %d{HH:mm:ss.SSS} %-5level %class{-1}/%L - %msg%xEx%n</pattern>-->
         </layout>
     </appender>
     <!-- MyBatis, 没有设置 appender, 且 additivity="true", 则交给上层 logger 去输出 -->
